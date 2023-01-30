@@ -10,7 +10,7 @@ const conn = require('./db/conn')
 
 // MODELS:
 const User = require('./models/User')
-
+const Idea = require('./models/Idea')
 
 // TEMPLATE ENGINE:
 app.engine('handlebars', exphbs.engine())

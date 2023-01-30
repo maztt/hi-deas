@@ -4,7 +4,8 @@
   "description": "The world's biggest dump for the not-so-dumb ideas.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js localhost 3000"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "express-flash": "^0.0.2",
     "express-session": "^1.17.3",
     "mysql2": "^3.1.0",
+    "nodemon": "^2.0.20",
     "sequelize": "^6.28.0",
     "session-file-store": "^1.5.0"
   }

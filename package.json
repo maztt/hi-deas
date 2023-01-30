@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/maztt/hi-deas/issues"
   },
-  "homepage": "https://github.com/maztt/hi-deas#readme"
+  "homepage": "https://github.com/maztt/hi-deas#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3"
+  }
 }

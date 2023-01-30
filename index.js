@@ -12,6 +12,12 @@ const conn = require('./db/conn')
 const User = require('./models/User')
 const Idea = require('./models/Idea')
 
+// IMPORTED ROUTES
+const ideasRoutes = require('./routes/ideasRoutes')
+
+// IMPORTED CONTROLLERS
+const IdeaController = require('./controllers/IdeaController')
+
 // TEMPLATE ENGINE:
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
@@ -57,6 +63,10 @@ app.use((req, res, next) => {
   next()
 })
 
+// ROUTES
+app.use('/ideas', ideasRoutes)
+
+app.get('/', IdeaController.showAll)
 
 
 // CONNECTION TO THE DATABASE

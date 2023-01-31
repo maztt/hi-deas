@@ -49,6 +49,19 @@ div.container {
 }
 
 
+/* FLASH MESSAGES */
+div.message {
+  padding: 1em;
+  color: #004085;
+  background-color: #CCE5FF;;
+  border: 1px solid #B8DAFF;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto 2em;
+  max-width: 60%;
+}
+
+
 /* FORMS */
 div.form-control {
   display: flex;

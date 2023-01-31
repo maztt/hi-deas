@@ -14,9 +14,11 @@ const Idea = require('./models/Idea')
 
 // IMPORTED ROUTES
 const ideasRoutes = require('./routes/ideasRoutes')
+const authRoutes = require('./routes/authRoutes')
 
 // IMPORTED CONTROLLERS
 const IdeaController = require('./controllers/IdeaController')
+const AuthController = require('./controllers/AuthController')
 
 // TEMPLATE ENGINE:
 app.engine('handlebars', exphbs.engine())
@@ -65,6 +67,7 @@ app.use((req, res, next) => {
 
 // ROUTES
 app.use('/ideas', ideasRoutes)
+app.use('/', authRoutes)
 
 app.get('/', IdeaController.showAll)
 

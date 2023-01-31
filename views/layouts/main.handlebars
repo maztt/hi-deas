@@ -17,8 +17,13 @@
     </a>
   <ul>
     <li><a href="/">Check some ideas</a></li>
-    <li><a href="/login">Sign In</a></li>
-    <li><a href="/register">Sign Up</a></li>
+    {{#if session.userId}}
+      <li><a href="/ideas/dashboard">My ideas</a></li>
+      <li><a href="/logout">Log out</a></li>
+    {{else}}
+      <li><a href="/login">Log in</a></li>
+      <li><a href="/register">Sign up</a></li>
+    {{/if}}
   </ul>
   </nav>
   <div class="container">

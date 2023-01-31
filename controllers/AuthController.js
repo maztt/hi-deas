@@ -43,9 +43,16 @@ module.exports = class AuthController {
     }
 
     try {
-      await User.create(user)
+      const createdUser = await User.create(user)
+
+      // Auto-login
+      req.session.userId = createdUser.id
+
       req.flash('message', 'Your account has been successfully created!')
-      res.redirect('/')
+
+      req.session.save(() => {
+        res.redirect('/')
+      })
     } catch(err) {
       console.error(`An error occurred: ${err}`)
     }

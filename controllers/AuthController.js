@@ -30,6 +30,26 @@ module.exports = class AuthController {
 
       return
     }
+
+    
+    // TO ENCRYPT THE PASSWORD
+    const salt = bcrypt.genSalt(10)
+    const hashedPassword = bcrypt.hashSync(password, salt)
+
+    const user = {
+      name,
+      email,
+      password: hashedPassword
+    }
+
+    try {
+      await User.create(user)
+      req.flash('message', 'Your account has been successfully created!')
+      res.redirect('/')
+    } catch(err) {
+      console.error(`An error occurred: ${err}`)
+    }
   }
+
 
 }

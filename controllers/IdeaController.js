@@ -24,7 +24,13 @@ module.exports = class IdeaController {
 
     const ideas = user.Ideas.map(result => result.dataValues)
 
-    res.render('ideas/dashboard', { ideas })
+    let userHasNoActiveIdeas = false
+
+    if (ideas.length === 0) {
+      userHasNoActiveIdeas = true
+    }
+
+    res.render('ideas/dashboard', { ideas, userHasNoActiveIdeas })
   }
 
   static newIdea (req, res) {

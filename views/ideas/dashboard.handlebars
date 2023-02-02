@@ -21,4 +21,7 @@
     </li>
     {{/each}}
   </ul>
+  {{#if userHasNoActiveIdeas}}
+    <p>You still haven't suggested none. Do it <a href="/ideas/new">here</a>.</p>
+  {{/if}}
 </div>

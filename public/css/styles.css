@@ -169,6 +169,10 @@ div.dashboard div.idea-info {
   gap: 1em;
 }
 
+div.dashboard a {
+  color: #F6982D;
+}
+
 /* AUTH SESSION (LOGIN / REGISTER) */
 div.auth-container {
   max-width: 450px;

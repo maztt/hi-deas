@@ -8,7 +8,23 @@ module.exports = class IdeaController {
   }
 
   static async dashboard (req, res) {
-    res.render('ideas/dashboard')
+    const userId = req.session.userId
+
+    const user = await User.findOne({
+      where: {
+        id: userId
+      },
+      include: Idea,
+      plain: true
+    })
+
+    if (!user) {
+      res.redirect('/login')
+    }
+
+    const ideas = user.Ideas.map(result => result.dataValues)
+
+    res.render('ideas/dashboard', { ideas })
   }
 
   static newIdea (req, res) {

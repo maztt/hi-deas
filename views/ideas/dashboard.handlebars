@@ -4,4 +4,10 @@
     <a href="/ideas/new" class="btn">Bring up a new not-so-dumb idea</a>
   </div>
   <h3>Your last not-so-dumb ideas:</h3>
+  <ul>
+    {{#each ideas}}
+      <li>{{this.title}}</li>
+      <li>{{this.description}}</li>
+    {{/each}}
+  </ul>
 </div>

@@ -1,0 +1,16 @@
+<div class="idea-form-container">
+  <a href="/ideas/dashboard">Check my last ideas</a>
+  <h1>Reviewing the idea:</h1>
+  <form action="/ideas/edit" method="POST">
+    <input type="hidden" name="id" value="{{idea.id}}">
+    <div class="form-control">
+      <label for="title">What is it?</label>
+      <input type="text" name="title" placeholder="How would you call it?" value="{{idea.title}}">
+    </div>
+    <div class="form-control">
+      <label for="description">What is that exactly?</label>
+      <textarea style="resize:none" name="description" rows="10" cols="200" placeholder="How would you describe it?">{{idea.description}}</textarea>
+    </div>
+    <input type="submit" value="Re-Let the world know!">
+  </form>
+</div>

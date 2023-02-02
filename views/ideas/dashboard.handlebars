@@ -12,7 +12,7 @@
         <span class="description">{{this.description}}</span>
       </div>
       <span class="actions">
-        <a href="/" class="btn">Edit</a>
+        <a href="/ideas/edit/{{this.id}}" class="btn">Edit</a>
         <form action="/ideas/delete" method="POST">
           <input type="hidden" name="id" value="{{this.id}}">
           <input type="submit" value="Delete" class="btn">

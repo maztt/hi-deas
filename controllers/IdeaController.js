@@ -77,7 +77,14 @@ module.exports = class IdeaController {
     } catch(err) {
       console.error(`An error occurred: ${err}`)
     }
+  }
 
 
+  static async editIdea (req, res) {
+    const id = req.params.id
+
+    const idea = await Idea.findOne({where: {id: id}, raw: true})
+
+    res.render('ideas/edit', { idea })
   }
 }

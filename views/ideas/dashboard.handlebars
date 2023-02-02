@@ -7,8 +7,10 @@
   <ul>
     {{#each ideas}}
     <li>
-      <splan class="label">{{this.title}}</splan>
-      <span class="description">{{this.description}}</span>
+      <div class="idea-info">
+        <span class="label">{{this.title}}</span>
+        <span class="description">{{this.description}}</span>
+      </div>
       <span class="actions">
         <a href="/" class="btn">Edit</a>
         <form action="/">

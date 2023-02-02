@@ -120,6 +120,55 @@ div.idea-form-container form {
   margin-top: 1.5em;
 }
 
+div.title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+div.title-container h2 {
+  border-left: 4px solid #F6982D;
+  padding: 10PX;
+}
+
+div.dashboard h3 {
+  margin-bottom: 1.5em;
+}
+
+div.dashboard ul {
+  list-style: none;
+}
+
+div.dashboard li {
+  padding: 12px;
+  border-bottom: 1px solid #F6982D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.dashboard span.label {
+  font-weight: bold;
+  color: #F6982D;
+}
+
+div.dashboard span.actions {
+  display: flex;
+}
+
+div.dashboard span.actions .btn {
+  color: #FFF;
+  border-color: #FFF;
+  padding: .5em;
+  margin: 0 0.5em;
+}
+
+div.dashboard div.idea-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 /* AUTH SESSION (LOGIN / REGISTER) */
 div.auth-container {
   max-width: 450px;

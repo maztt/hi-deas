@@ -100,6 +100,26 @@ form input[type='submit']:hover, .btn:hover {
 }
 
 
+div.idea-form-container {
+  color: #F6982D;
+}
+
+div.idea-form-container:hover {
+  color: #FFF;
+}
+
+div.idea-form-container h1 {
+  margin: 1em 0;
+  color: #FFF;
+  border-left: 4px solid #F6982D;
+  padding: 0.3em;
+}
+
+div.idea-form-container form {
+  max-width: 30%;
+  margin-top: 1.5em;
+}
+
 /* AUTH SESSION (LOGIN / REGISTER) */
 div.auth-container {
   max-width: 450px;

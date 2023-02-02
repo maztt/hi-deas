@@ -6,8 +6,17 @@
   <h3>Your last not-so-dumb ideas:</h3>
   <ul>
     {{#each ideas}}
-      <li>{{this.title}}</li>
-      <li>{{this.description}}</li>
+    <li>
+      <splan class="label">{{this.title}}</splan>
+      <span class="description">{{this.description}}</span>
+      <span class="actions">
+        <a href="/" class="btn">Edit</a>
+        <form action="/">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <input type="submit" value="Delete" class="btn">
+        </form>
+      </span>
+    </li>
     {{/each}}
   </ul>
 </div>

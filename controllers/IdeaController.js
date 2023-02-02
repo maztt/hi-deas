@@ -87,4 +87,30 @@ module.exports = class IdeaController {
 
     res.render('ideas/edit', { idea })
   }
+
+  static async editIdeaPost (req, res) {
+
+    const id = req.body.id
+
+    const idea = {
+      title: req.body.title,
+      description: req.body.description,
+    }
+
+    try {
+      await Idea.update(idea, {
+        where: {
+          id
+        }
+      })
+      req.flash('message', 'Idea has been edited.')
+      req.session.save(() => {
+        res.redirect('/ideas/dashboard')
+      })
+    } catch(err) {
+      console.error(`An error occurred: ${err}`)
+    }
+
+    
+  }
 }

@@ -10,4 +10,8 @@ module.exports = class IdeaController {
   static async dashboard (req, res) {
     res.render('ideas/dashboard')
   }
+
+  static newIdea (req, res) {
+    res.render('ideas/new')
+  }
 }

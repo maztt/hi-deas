@@ -50,4 +50,28 @@ module.exports = class IdeaController {
       console.error(`An error occurred: ${err}`)
     }
   }
+
+  static async deleteIdea (req, res) {
+    const id = req.body.id
+    const userId = req.session.userId
+
+    try {
+     await Idea.destroy({
+      where: {
+        id,
+        userId
+      }
+    })
+
+      req.flash('message', 'You deleted the idea. Was it really that bad?')
+      req.session.save(() => {
+        res.redirect('/ideas/dashboard')
+      })
+
+    } catch(err) {
+      console.error(`An error occurred: ${err}`)
+    }
+
+
+  }
 }

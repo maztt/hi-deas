@@ -4,6 +4,7 @@ const IdeaController = require('../controllers/IdeaController')
 
 const checkAuth = require('../helpers/auth').checkAuth
 
+router.get('/new', checkAuth, IdeaController.newIdea)
 router.get('/dashboard', checkAuth, IdeaController.dashboard)
 router.get('/', IdeaController.showAll)
 

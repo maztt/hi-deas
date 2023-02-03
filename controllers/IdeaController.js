@@ -4,7 +4,14 @@ const User = require('../models/User')
 
 module.exports = class IdeaController {
   static async showAll (req, res) {
-    res.render('ideas/home')
+
+    const ideasData = await Idea.findAll({
+      include: User
+    })
+
+    const ideas = ideasData.map(result => result.get({plain: true}))
+
+    res.render('ideas/home', { ideas })
   }
 
   static async dashboard (req, res) {

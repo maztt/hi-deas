@@ -1,17 +1,33 @@
 const Idea = require('../models/Idea')
 const User = require('../models/User')
 
+const { Op } = require('sequelize')
 
 module.exports = class IdeaController {
   static async showAll (req, res) {
 
+    let search = ''
+
+    if (req.query.search) {
+      search = req.query.search
+    }
+
     const ideasData = await Idea.findAll({
-      include: User
+      include: User,
+      where: {
+        title: {[Op.like]: `%${search}%`}
+      }
     })
 
     const ideas = ideasData.map(result => result.get({plain: true}))
 
-    res.render('ideas/home', { ideas })
+    let ideasAmount = ideas.length
+
+    if (ideasAmount === 0) {
+      ideasAmount = false
+    }
+
+    res.render('ideas/home', { ideas, search, ideasAmount })
   }
 
   static async dashboard (req, res) {

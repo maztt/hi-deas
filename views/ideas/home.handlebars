@@ -1,5 +1,12 @@
 <div class="home-header">
-  <h1>The world's biggest dump for the not-so-dumb ideas:</h1>
+  {{#if search}}
+    <h1>Ideas containing: "<span>{{search}}</span>".</h1>
+    {{#if ideasAmount}}
+      <p><span>{{ideasAmount}}</span> results.</p>
+    {{/if}}
+  {{else}}
+    <h1>The world's biggest dump for the not-so-dumb ideas:</h1>
+  {{/if}}
   <form action="/" method="GET">
     <input type="text" name="search" placeholder="Find something kinda specific">
     <input type="submit" class="btn" value="Search">

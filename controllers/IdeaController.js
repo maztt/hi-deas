@@ -1,9 +1,8 @@
-const Idea = require('../models/Idea')
-const User = require('../models/User')
+import Idea from '../models/Idea.js'
+import User from '../models/User.js'
+import { Op } from 'sequelize'
 
-const { Op } = require('sequelize')
-
-module.exports = class IdeaController {
+export class IdeaController {
   static async showAll (req, res) {
 
     let search = ''

@@ -1,8 +1,8 @@
-const express = require('express')
-const router = express.Router()
-const IdeaController = require('../controllers/IdeaController')
+import express from 'express'
+import { IdeaController } from '../controllers/IdeaController.js'
+import { checkAuth } from '../helpers/auth.js'
 
-const checkAuth = require('../helpers/auth').checkAuth
+const router = express.Router()
 
 router.get('/new', checkAuth, IdeaController.newIdea)
 router.post('/new', checkAuth, IdeaController.newIdeaPost)
@@ -12,4 +12,4 @@ router.get('/dashboard', checkAuth, IdeaController.dashboard)
 router.post('/delete', checkAuth, IdeaController.deleteIdea)
 router.get('/', IdeaController.showAll)
 
-module.exports = router
+export default router

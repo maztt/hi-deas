@@ -1,8 +1,6 @@
-const { DataTypes } = require('sequelize')
-
-const db = require('../db/conn')
-
-const User = require('./User')
+import { DataTypes } from 'sequelize'
+import db from '../db/conn.js'
+import User from './User.js'
 
 const Idea = db.define('Idea', {
   title: {
@@ -20,4 +18,4 @@ const Idea = db.define('Idea', {
 Idea.belongsTo(User)
 User.hasMany(Idea)
 
-module.exports = Idea
+export default Idea

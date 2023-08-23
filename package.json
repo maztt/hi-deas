@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The world's biggest dump for the not-so-dumb ideas.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./index.js localhost 3000"

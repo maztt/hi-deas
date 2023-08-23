@@ -1,6 +1,6 @@
-const { Sequelize } = require('sequelize')
+import Sequelize from 'sequelize'
 
-const sequelize = new Sequelize('hi-deas', 'root', '', {
+const sequelize = new Sequelize('hi-deas', 'root', 'root', {
   host: 'localhost',
   dialect: 'mysql'
 })
@@ -12,4 +12,4 @@ try {
   console.error(`It was not possible to connect to the database: ${err}`)
 }
 
-module.exports = sequelize
+export default sequelize

@@ -1,8 +1,7 @@
-const User = require('../models/User')
+import User from '../models/User.js'
+import bcrypt from 'bcryptjs'
 
-const bcrypt = require('bcryptjs')
-
-module.exports = class AuthController {
+export class AuthController {
 
   static login (req, res) {
     res.render('auth/login')

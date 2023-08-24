@@ -10,6 +10,6 @@ router.get('/edit/:id', checkAuth, IdeaController.editIdea)
 router.post('/edit', checkAuth, IdeaController.editIdeaPost)
 router.get('/dashboard', checkAuth, IdeaController.dashboard)
 router.post('/delete', checkAuth, IdeaController.deleteIdea)
-router.get('/', IdeaController.showAll)
+router.get('/', IdeaController.list)
 
 export default router

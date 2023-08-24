@@ -1,17 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
 * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto Mono', 'Segoe UI', Verdana, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #222;
   color: #fff;
 }
 
-
-/* NAVBAR */
-nav#navbar img {
-  height: 40px;
-}
-
+/* NAV BAR */
 nav#navbar {
   padding: 1.2em 1.4em;
   margin-bottom: 1em;
@@ -22,13 +19,19 @@ nav#navbar {
   border-bottom: 1px solid #F6982D;
 }
 
+nav#navbar img {
+  height: 40px;
+}
+
 nav#navbar ul {
   display: flex;
   list-style: none;
 }
 
 nav#navbar ul li {
-  margin-left: 1em;
+  margin-left: 2em;
+  border-bottom: 1px solid #F6982D;
+  border-radius: 5px;
 }
 
 nav#navbar ul li a {
@@ -99,7 +102,6 @@ form input[type='submit']:hover, .btn:hover {
   color: #FFF;
 }
 
-
 div.idea-form-container {
   color: #F6982D;
 }
@@ -147,6 +149,7 @@ div.dashboard li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1em;
 }
 
 div.dashboard span.label {
@@ -167,12 +170,23 @@ div.dashboard span.actions .btn {
 
 div.dashboard div.idea-info {
   display: flex;
+  margin-left: 3em;
   flex-direction: column;
-  gap: 1em;
+  gap: .5em;
+}
+
+div.dashboard span.timestamp {
+  font-size: .7rem;
+  color: #915005;
 }
 
 div.dashboard a {
   color: #F6982D;
+}
+
+span.description {
+  max-width: 80%;
+  flex-wrap: wrap;
 }
 
 

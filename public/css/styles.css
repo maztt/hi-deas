@@ -97,7 +97,7 @@ form input[type='submit'], .btn {
   color: #F6982D;
   border: 2px solid #F6982D;
   padding: .5em 1.2em;
-  margin-bottom: 1em;
+  margin: 1.5em 0;
   font-size: 1em;
   font-weight: bold;
   border-radius: 5px;
@@ -212,10 +212,12 @@ div.auth-container h2 {
   color: #FFF;
   border-left: 4px solid #F6982D;
   padding: .3em;
+  padding-left: 1em;
   width: 100px;
 }
 
 div.auth-container a {
+  font-size: .7em;
   color: #F6982D;
 }
 

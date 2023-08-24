@@ -44,6 +44,15 @@ nav#navbar ul li a:hover {
   color: #F6982D;
 }
 
+nav#navbar .btn-register {
+  color: #F6982D;
+}
+
+nav#navbar .btn-register:hover {
+  color: #FFF;
+}
+
+
 
 /* CONTAINER */
 div.container {

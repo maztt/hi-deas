@@ -65,6 +65,24 @@ export class IdeaController {
         }
     }
 
+    static async show (req, res) {
+        const id = req.params.id
+        
+        try {
+            const idea = await Idea.findOne({
+                where: { id: id },
+                raw: true
+            })
+            const user = await User.findOne({
+                where: { id: idea.UserId },
+                raw: true
+            })
+            res.render('ideas/show', { idea, user })
+        } catch (err) {
+            console.error(`An error occurred: ${err}`)
+        }
+    }
+
     static async deleteIdea (req, res) {
         const id = req.body.id
         const userId = req.session.userId

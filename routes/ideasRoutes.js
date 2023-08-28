@@ -6,6 +6,7 @@ const router = express.Router()
 
 router.get('/new', checkAuth, IdeaController.newIdea)
 router.post('/new', checkAuth, IdeaController.newIdeaPost)
+router.get('/show/:id', IdeaController.show)
 router.get('/edit/:id', checkAuth, IdeaController.editIdea)
 router.post('/edit', checkAuth, IdeaController.editIdeaPost)
 router.get('/dashboard', checkAuth, IdeaController.dashboard)

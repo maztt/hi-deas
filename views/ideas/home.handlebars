@@ -18,7 +18,7 @@
       <input type="hidden" name="order" value="new">
       <button type="submit"><i class="bi bi-arrow-up"></i></button>
     </form>
-        <form action="/" method="GET">
+    <form action="/" method="GET">
       <input type="hidden" name="search" value="{{this.search}}">
       <input type="hidden" name="order" value="old">
       <button type="submit"><i class="bi bi-arrow-down"></i></button>
@@ -30,9 +30,9 @@
   {{#each ideas}}
     <figure>
       <blockquote>
-        "{{this.title}}"
+        "<a href="/ideas/show/{{this.id}}">{{this.title}}</a>"
       </blockquote>
-      <figcaption>by <span>{{this.User.name}}</span></figcaption>
+      <figcaption>by <span>{{this.User.name}}</span>, suggesting <span class="idea-description">{{this.description}}</span></figcaption>
     </figure>
   {{/each}}
 </div>

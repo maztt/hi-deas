@@ -303,17 +303,28 @@ div.ideas-container figure {
 div.ideas-container blockquote {
   font-style: italic;
   font-size: 2em;
-  margin-bottom: .4em;
 }
 
 div.ideas-container span {
   color: #F6982D
 }
 
+div.ideas-container a {
+  text-decoration: none;
+}
+
+div.container figcaption {
+  font-size: .85em;
+}
+
+div.ideas-container span.idea-description {
+  color: gray;
+  font-size: .7em;
+}
 
 /* FOOTER */
 footer {
-  height: 150px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
